@@ -1,0 +1,10 @@
+{
+  "note": "Demo imagery sourced from Openverse (openly-licensed). Replace with the client's own branded photography before final launch.",
+  "images": [
+    { "file": "hero-tower.jpg", "source": "Openverse / Flickr", "query": "office glass building corporate" },
+    { "file": "glass-towers.jpg", "source": "Openverse / Flickr", "query": "skyscraper office glass" },
+    { "file": "corporate-plaza.jpg", "source": "Openverse / Flickr", "query": "modern office workspace" },
+    { "file": "clean-lobby.jpg", "source": "Openverse / Flickr", "query": "luxury office lobby interior" },
+    { "file": "clean-desk.jpg", "source": "Openverse / StockSnap", "query": "office desk clean minimal interior" }
+  ]
+}
