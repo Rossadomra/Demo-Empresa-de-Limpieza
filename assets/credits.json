@@ -1,10 +1,10 @@
 {
-  "note": "Demo imagery sourced from Openverse (openly-licensed). Replace with the client's own branded photography before final launch.",
+  "note": "Imagery hotlinked from the Unsplash production CDN (images.unsplash.com), free to use under the Unsplash License. Replace with the client's own branded cleaning photography before final launch.",
   "images": [
-    { "file": "hero-tower.jpg", "source": "Openverse / Flickr", "query": "office glass building corporate" },
-    { "file": "glass-towers.jpg", "source": "Openverse / Flickr", "query": "skyscraper office glass" },
-    { "file": "corporate-plaza.jpg", "source": "Openverse / Flickr", "query": "modern office workspace" },
-    { "file": "clean-lobby.jpg", "source": "Openverse / Flickr", "query": "luxury office lobby interior" },
-    { "file": "clean-desk.jpg", "source": "Openverse / StockSnap", "query": "office desk clean minimal interior" }
+    { "role": "hero / CTA backgrounds", "unsplash_id": "photo-1603712725038-e9334ae8f39f", "shows": "professional mopping the floor outside a modern office building" },
+    { "role": "commercial cleaning / staff", "unsplash_id": "photo-1581578731548-c64695cc6952", "shows": "cleaner wiping a window in gloves and a mask" },
+    { "role": "office cleaning", "unsplash_id": "photo-1628177142898-93e36e4e3a50", "shows": "gloved hand disinfecting a surface with a spray bottle" },
+    { "role": "janitorial services", "unsplash_id": "photo-1527515637462-cff94eecc1ac", "shows": "vacuuming a carpet during a cleaning service" },
+    { "role": "deep cleaning / spotless result", "unsplash_id": "photo-1564540583246-934409427776", "shows": "spotless, deep-cleaned modern bathroom" }
   ]
 }
