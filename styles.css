@@ -7,21 +7,21 @@
    1. Tokens
    ============================================================= */
 :root {
-  /* Brand palette */
-  --navy:      #0a1f3c;
-  --navy-2:    #0f2a4f;
-  --navy-3:    #143462;
-  --navy-soft: #1c3a66;
-  --green:     #16a34a;   /* professional green */
-  --green-2:   #119048;
-  --green-3:   #0e7a3d;
-  --green-glow: rgba(22, 163, 74, 0.35);
+  /* Brand palette — clean, fresh, professional */
+  --navy:      #0c2340;
+  --navy-2:    #103060;
+  --navy-3:    #164070;
+  --navy-soft: #1e4a80;
+  --green:     #0ea5e9;   /* sky blue — clean & fresh */
+  --green-2:   #0284c7;
+  --green-3:   #0369a1;
+  --green-glow: rgba(14, 165, 233, 0.30);
 
   --white:     #ffffff;
   --paper:     #ffffff;
-  --gray-50:   #f6f8fb;   /* light gray */
-  --gray-100:  #eef2f7;
-  --gray-200:  #e2e8f0;
+  --gray-50:   #f0f7ff;   /* light sky tint */
+  --gray-100:  #e0f0ff;
+  --gray-200:  #cce4f8;
 
   --ink:       #0c1a30;
   --ink-soft:  #3a4860;
@@ -345,25 +345,22 @@ h1, h2, h3, h4 {
 .hero__tint {
   position: absolute; inset: 0; z-index: -2;
   background:
-    linear-gradient(105deg, rgba(8,20,40,.94) 0%, rgba(10,31,60,.86) 42%, rgba(10,31,60,.55) 100%),
-    linear-gradient(0deg, rgba(8,18,34,.7), rgba(8,18,34,.1) 60%);
+    linear-gradient(105deg, rgba(8,20,40,.78) 0%, rgba(12,35,64,.62) 45%, rgba(12,35,64,.32) 100%),
+    linear-gradient(0deg, rgba(8,18,34,.55), rgba(8,18,34,.0) 65%);
 }
 .hero__mesh {
   position: absolute; inset: -20%; z-index: -1; pointer-events: none;
   background:
-    radial-gradient(38% 40% at 18% 22%, rgba(22,163,74,.35) 0%, transparent 70%),
-    radial-gradient(36% 38% at 82% 72%, rgba(43,108,176,.4) 0%, transparent 72%);
-  filter: blur(20px);
-  animation: meshDrift 22s ease-in-out infinite;
+    radial-gradient(38% 40% at 18% 22%, rgba(14,165,233,.22) 0%, transparent 70%),
+    radial-gradient(36% 38% at 82% 72%, rgba(14,165,233,.18) 0%, transparent 72%);
+  filter: blur(24px);
+  animation: meshDrift 28s ease-in-out infinite;
 }
 @keyframes meshDrift {
   0%,100% { transform: translate3d(0,0,0) scale(1); }
-  50%     { transform: translate3d(2%, -2%, 0) scale(1.12); }
+  50%     { transform: translate3d(1%, -1%, 0) scale(1.06); }
 }
-.hero__grain {
-  position: absolute; inset: 0; z-index: -1; opacity: .05; pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+.hero__grain { display: none; }
 .hero__inner { max-width: 720px; }
 .hero__badge {
   display: inline-flex; align-items: center; gap: .55rem;
