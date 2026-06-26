@@ -831,3 +831,86 @@ h1, h2, h3, h4 {
   .marquee__track { animation: none; }
   .float-quote { animation: none; }
 }
+
+/* ===============================================================
+   CLEAN WHITE THEME — Professional cleaning company look
+   =============================================================== */
+
+/* Topbar: white/light */
+.topbar {
+  background: #fff;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+}
+.topbar__item { color: var(--ink-soft); opacity: 1; }
+.topbar__item svg { color: var(--green-2); }
+.topbar__item:not(:first-child)::before { background: var(--line); }
+
+/* Nav: always white — no dark transparent mode */
+.nav--transparent {
+  background: rgba(255,255,255,.97);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 1px 0 var(--line);
+}
+.nav--transparent .brand__name,
+.nav--transparent .nav__link,
+.nav--transparent .nav__phone { color: var(--ink); }
+.nav--transparent .brand__tag { color: var(--ink-mute); }
+.nav--transparent .nav__link { color: var(--ink-soft); }
+.nav--transparent .nav__phone svg { color: var(--green-2); }
+.nav--transparent .nav__toggle span { background: var(--ink); }
+
+/* Hero: light blue-white overlay, dark text */
+.hero { color: var(--ink); }
+.hero__tint {
+  background:
+    linear-gradient(110deg, rgba(236,246,255,.94) 0%, rgba(236,246,255,.80) 48%, rgba(236,246,255,.42) 100%),
+    linear-gradient(0deg, rgba(236,246,255,.75), transparent 62%);
+}
+.hero__title { color: var(--navy); }
+.hero__title em { color: var(--green-2); }
+.hero__sub { color: var(--ink-soft); }
+.hero__badge {
+  background: rgba(14,165,233,.1);
+  border-color: rgba(14,165,233,.28);
+  color: var(--navy);
+}
+.hero__badge .dot { background: var(--green-2); box-shadow: 0 0 0 4px rgba(14,165,233,.2); }
+.hero__badges li { color: var(--ink-soft); }
+.hero__badges svg { color: var(--green-2); }
+.hero__card {
+  background: rgba(255,255,255,.92);
+  border-color: rgba(12,26,48,.1);
+}
+.hero__card p { color: var(--ink-soft); }
+.hero__card .who { color: var(--navy); }
+
+/* btn outline for light hero */
+.btn--outline-navy {
+  background: transparent; color: var(--navy);
+  box-shadow: inset 0 0 0 1.5px var(--navy);
+}
+.btn--outline-navy:hover { background: var(--navy); color: #fff; transform: translateY(-3px); }
+
+/* Stats strip: white */
+.stats { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stats__grid { background: var(--line); box-shadow: none; }
+.stat { background: #fff; }
+.stat__num { color: var(--navy); }
+.stat__num .accent { color: var(--green-2); }
+.stat__label { color: var(--ink-mute); }
+
+/* Industries: light */
+.industries { background: var(--gray-50); color: var(--ink); }
+.industries::before { background: radial-gradient(50% 50% at 85% 10%, rgba(14,165,233,.06), transparent 70%); }
+.industries .section-title { color: var(--navy) !important; }
+.industries .section-sub { color: var(--ink-soft) !important; }
+.eyebrow--light { color: var(--green-2) !important; }
+.eyebrow--light::before { background: var(--green-2) !important; }
+.ind-grid { background: rgba(12,35,64,.07); }
+.ind { background: #fff; }
+.ind:hover { background: var(--gray-50); }
+.ind__icon { background: rgba(14,165,233,.1); color: var(--green-2); }
+.ind h3 { color: var(--navy); }
+.ind p { color: var(--ink-soft); }
