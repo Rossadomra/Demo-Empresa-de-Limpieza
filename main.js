@@ -171,21 +171,34 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* ---- Contact form (simulated submit) ---- */
+  /* ---- Contact form (Formspree submit) ---- */
   function initForm() {
     const form = $("#quote-form");
     if (!form) return;
     const success = $(".form__success", form);
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", async e => {
       e.preventDefault();
       if (!form.reportValidity()) return;
       const btn = $('button[type="submit"]', form);
       if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
-      setTimeout(() => {
-        form.classList.add("is-sent");
-        if (success) success.classList.add("is-visible");
-        form.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
-      }, 900);
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        if (res.ok) {
+          form.classList.add("is-sent");
+          if (success) success.classList.add("is-visible");
+          form.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+        } else {
+          if (btn) { btn.disabled = false; btn.textContent = "Request Free Estimate →"; }
+          alert("Something went wrong. Please call us directly.");
+        }
+      } catch {
+        if (btn) { btn.disabled = false; btn.textContent = "Request Free Estimate →"; }
+        alert("Something went wrong. Please call us directly.");
+      }
     });
   }
 
